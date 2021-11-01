@@ -25,5 +25,6 @@ VALUES
   (6, 'Montague', 'Summers', 2, 2),
   (7, 'Octavia', 'Butler', 2, 2),
   (8, 'Unica', 'Zurn', 2, 4),
+  
   (9, 'Piers', 'Gaveston', 6, 4),
   (10, 'Charles', 'LeRoi', 7, 3);
