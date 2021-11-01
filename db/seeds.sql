@@ -1,9 +1,9 @@
-INSERT INTO department(name)
+INSERT INTO department(ID, department_name)
 VALUES
-("Sales"),
-("Engineering"),
-("Finance"),
-("Legal");
+(1, "Sales"),
+(2, "Engineering"),
+(3, "Finance"),
+(4, "Legal");
 
 INSERT INTO roles(ID, title, salary, department_id)
 VALUES
@@ -17,14 +17,13 @@ VALUES
 
 INSERT INTO employees (ID, first_name, last_name, role_id, manager_id)
 VALUES
-  (1, 'Ronald', 'Firbank', 1, NULL),
-  (2, 'Virginia', 'Woolf', 1, NULL),
-  (3, 'Katherine', 'Mansfield', 4, NULL),
-  (4, 'Dora', 'Carrington', 3, 1),
-  (5, 'Edward', 'Bellamy', 3, 1),
-  (6, 'Montague', 'Summers', 2, 2),
-  (7, 'Octavia', 'Butler', 2, 2),
-  (8, 'Unica', 'Zurn', 2, 4),
-  
-  (9, 'Piers', 'Gaveston', 6, 4),
-  (10, 'Charles', 'LeRoi', 7, 3);
+  (1, 'Ronald', 'Firbank', "Manager", 0),
+  (2, 'Virginia', 'Woolf', "Manager", 0),
+  (3, 'Katherine', 'Mansfield', "Manager", 0),
+  (4, 'Dora', 'Carrington',"Sales Lead", 1),
+  (5, 'Edward', 'Bellamy', "Salesperson", 1),
+  (6, 'Montague', 'Summers', "Software Engineer", 2),
+  (7, 'Octavia', 'Butler', "Accountant", 2),
+  (8, 'Unica', 'Zurn', "Legal Team Lead", 3),
+  (9, 'Piers', 'Gaveston', "Lawyer", 2),
+  (10, 'Charles', 'LeRoi', "Software Engineer", 3);
