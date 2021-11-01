@@ -3,14 +3,16 @@ const inquirer = require("inquirer");
 //connect mysql
 var mysql = require("mysql2");
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Summers1992!",
-  database: "roles"
-  //connect to db departments, & to db employees
-}
-console.log('Connected to the roles database.'));
+var con = mysql.createConnection(
+  {
+    host: "localhost",
+    user: "root",
+    password: "Summers1992!",
+    database: "roles",
+    //connect to db departments, & to db employees
+  },
+  console.log("Connected to the roles database.")
+);
 // con.connect(function (err) {
 //   if (err) throw err;
 //   con.query("SELECT * FROM roles", function (err, result) {
@@ -47,6 +49,9 @@ inquirer
         console.log("chose to view all depts.");
         // query to view formatted table showing department names and department ids
         //SELECT * FROM departments
+        db.query(`SELECT * FROM departments`, (err, rows) => {
+          console.log(rows);
+        });
         break;
       case "View all roles":
         /* implement the statement(s) to be executed when
@@ -54,6 +59,9 @@ inquirer
         console.log("chose to view all roles");
         // query to view formatted table showing job title, role id, the deparment that role belongs in and the salary for the role
         //SELECT * FROM roles
+        db.query(`SELECT * FROM roles`, (err, rows) => {
+          console.log(rows);
+        });
         break;
       case "View all employees":
         /* implement the statement(s) to be executed when
@@ -61,6 +69,9 @@ inquirer
         console.log("chose to view all employees");
         // query to view formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers to that employee
         //SELECT * FROM employees
+        db.query(`SELECT * FROM employees`, (err, rows) => {
+          console.log(rows);
+        });
         break;
       case "Add a department":
         /* implement the statement(s) to be executed when
