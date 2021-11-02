@@ -1,0 +1,27 @@
+{
+  "name": "Employee_CMS",
+  "version": "1.0.0",
+  "description": "This is an employee CMS which can be run from the terminal. Specifically addressing the management of employee information for team members within an engineering team.",
+  "main": "index.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izztnkr/Employee_CMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izztnkr/Employee_CMS/issues"
+  },
+  "homepage": "https://github.com/izztnkr/Employee_CMS#readme"
+}
