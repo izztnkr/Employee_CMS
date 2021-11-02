@@ -1,3 +1,5 @@
+use employees_db
+
 INSERT INTO department(ID, department_name)
 VALUES
 (1, "Sales"),
