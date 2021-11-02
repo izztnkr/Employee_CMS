@@ -28,7 +28,7 @@ class DB {
   }
   findAllDepartments() {
     return this.connection.query(
-      "SELECT * from departments",
+      "SELECT * from department",
       function (err, result) {
         if (err) {
           console.error("An error occurred", err);
@@ -39,6 +39,18 @@ class DB {
     );
   }
   // addDepartment() {
+  //   return this.connection.query(
+  //     "SELECT * from departments",
+  //     function (err, result) {
+  //       if (err) {
+  //         console.error("An error occurred", err);
+  //         throw err;
+  //       }
+  //       console.log(result);
+  //     }
+  //   );
+  // }
+    // addDepartment() {
   //   return this.connection.query(
   //     "SELECT * from departments",
   //     function (err, result) {

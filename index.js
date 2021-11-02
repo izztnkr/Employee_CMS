@@ -31,6 +31,7 @@ const promptUser = () => {
           console.log("chose to view all depts.");
 
           db.findAllDepartments();
+          promptUser();
 
           // query to view formatted table showing department names and department ids
           //SELECT * FROM departments
@@ -45,6 +46,7 @@ const promptUser = () => {
           // query to view formatted table showing job title, role id, the deparment that role belongs in and the salary for the role
           //SELECT * FROM roles
           db.findAllRoles();
+          promptUser();
           break;
         case "View all employees":
           /* implement the statement(s) to be executed when
@@ -53,11 +55,13 @@ const promptUser = () => {
           // query to view formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers to that employee
           //SELECT * FROM employees
           db.findAllEmployees();
+          promptUser();
           break;
         case "Add a department":
           /* implement the statement(s) to be executed when
               expression = value3 */
           console.log("chose to add a department");
+          promptUser();
           // query to view formatted table showing department names
           //prompted to enter department name
           //which is then added to database and shown by query to view formatted table showing department names
@@ -66,6 +70,7 @@ const promptUser = () => {
           /* implement the stlsatement(s) to be executed when
                 expression = value3 */
           console.log("chose to add a role");
+          promptUser();
           // prompted to enter the name of the role, salary, and department for the role
           //which is then added to database and shown by query to view formatted table showing roles
           break;
@@ -73,6 +78,7 @@ const promptUser = () => {
           /* implement the statement(s) to be executed when
             expression = value3 */
           console.log("chose to and an employee");
+          promptUser();
           //prompted to enter the employee's first name, last name, role, and manager
           //which is then added to database and shown by query to view formatted table showing employees
           break;
@@ -80,6 +86,7 @@ const promptUser = () => {
           /* implement the statement(s) to be executed when
             expression = value3 */
           console.log("chose to update an employee role");
+          promptUser();
           //query to view formatted table showing employees
           //prompted to select an employee to update, takes input
           //which is then added to database and shown by query to view formatted table showing employees
@@ -88,6 +95,7 @@ const promptUser = () => {
           /* implement the statement(s) to be executed if expression
        doesn't match any of the above cases */
           console.log("invalid answer");
+          promptUser();
         //return to start of inquirer prompt.
       }
     });
