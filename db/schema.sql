@@ -10,14 +10,14 @@ CREATE TABLE department (
 CREATE TABLE roles (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(30) NOT NULL,
-  salary VARCHAR(30) NOT NULL,
-  department_id VARCHAR(30) NOT NULL  
+  salary INTEGER NOT NULL,
+  department_id INTEGER NOT NULL  
 );
 
 CREATE TABLE employees (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
-  role_id VARCHAR(30) NOT NULL,
-  manager_id VARCHAR(10)  
+  role_id INTEGER NOT NULL,
+  manager_id INTEGER  
 );
